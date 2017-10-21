@@ -15,8 +15,10 @@
 
 package com.amazonaws.devicefarm.android.referenceapp.Activities;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -70,9 +72,13 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         generateDataModel();
         setUpToolBar();
         setUpNavigationDrawer();
-
+        displayPopup();
         //Displays the first drawer row
         displayFragment(0);
+    }
+
+    private void displayPopup(){
+        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 10);
     }
 
     /**
