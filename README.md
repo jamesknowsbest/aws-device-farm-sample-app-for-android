@@ -1,4 +1,13 @@
-# AWS Device Farm Sample App for Android
+# AWS Device Farm Sample App for Android fork
+I forked this project to hardcode a popup to appear where a dialoge box asks for permission. 
+
+
+Beginning in Android 6.0 (API level 23), users grant permissions to apps while the app is running, not when they install the app. This approach streamlines the app install process, since the user does not need to grant permissions when they install or update the app. It also gives the user more control over the app's functionality; for example, a user could choose to give a camera app access to the camera but not to the device location. The user can revoke the permissions at any time, by going to the app's Settings screen.
+
+source: https://stackoverflow.com/a/36354478/8016330
+
+When uploading apps to Device Farm some appium tests fail because a popup appear. This app is designed to make the popup so that tests can be written around it to dismiss the popup. 
+
 This is a sample native Android app that contains many of the stock Android components and elements, along with example [Appium](https://github.com/awslabs/aws-device-farm-appium-tests-for-sample-app), [Calabash](https://github.com/awslabs/aws-device-farm-calabash-tests-for-sample-app), and [Espresso](https://github.com/awslabs/aws-device-farm-sample-app-for-android#strategies-for-espresso) tests. You can use the app and example tests as a reference for your own AWS Device Farm test scripts.
 
 #### Notes
