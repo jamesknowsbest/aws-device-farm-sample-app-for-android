@@ -15,7 +15,9 @@
 
 package com.amazonaws.devicefarm.android.referenceapp.Fragments;
 
+import android.Manifest;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +27,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.amazonaws.devicefarm.android.referenceapp.Activities.MainActivity;
 import com.amazonaws.devicefarm.android.referenceapp.R;
 
 import butterknife.ButterKnife;
@@ -79,8 +82,12 @@ public class LoginFragment extends Fragment {
         ALT_BUTTON_SUCCESS_TITLE = getString(R.string.logout_button_title);
 
         imm = (InputMethodManager)getActivity().getSystemService(getActivity().getApplicationContext().INPUT_METHOD_SERVICE);
-
+        displayPopup();
         return view;
+    }
+
+    private void displayPopup(){
+        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 10);
     }
 
     /**

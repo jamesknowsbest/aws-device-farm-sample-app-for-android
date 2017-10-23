@@ -72,14 +72,12 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         generateDataModel();
         setUpToolBar();
         setUpNavigationDrawer();
-        displayPopup();
+        //displayPopup();
         //Displays the first drawer row
         displayFragment(0);
     }
 
-    private void displayPopup(){
-        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 10);
-    }
+
 
     /**
      * Sets the toolbar as the actionbar
