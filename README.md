@@ -28,10 +28,10 @@ el3 = driver.find_element_by_id("com.android.packageinstaller:id/permission_deny
 el3.click()
 ```
 
-### Instrumentation
+## Instrumentation
   TODO: need to implement solution from this [project](https://github.com/dannyroa/espresso-samples/blob/master/RuntimePermissions/app/src/androidTest/java/com/dannyroa/espresso_samples/runtime_permissions/PermissionsTest.java#L42): 
 
-### Calabash
+## Calabash
   TODO
   
   
