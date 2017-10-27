@@ -29,7 +29,7 @@ el3.click()
 ```
 
 ### Instrumentation
-  TODO
+  TODO: need to implement solution from this [project](https://github.com/dannyroa/espresso-samples/blob/master/RuntimePermissions/app/src/androidTest/java/com/dannyroa/espresso_samples/runtime_permissions/PermissionsTest.java#L42): 
 
 ### Calabash
   TODO
