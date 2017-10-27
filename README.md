@@ -8,26 +8,30 @@ source: https://stackoverflow.com/a/36354478/8016330
 
 When uploading apps to Device Farm some appium tests fail because a popup appear. This app is designed to make the popup so that tests can be written around it to dismiss the popup. 
 
-##Appium java/python
+## Appium java/python
 
-###Java [link](https://github.com/jamesknowsbest/sample-appium-test-to-dismiss-popups/blob/master/src/main/java/com/jamesknowsbest/www/SampleTest.java) 
-```MobileElement el3 = (MobileElement) driver.findElementById("com.android.packageinstaller:id/permission_allow_button");
+### Java [link](https://github.com/jamesknowsbest/sample-appium-test-to-dismiss-popups/blob/master/src/main/java/com/jamesknowsbest/www/SampleTest.java) 
+
+```
+MobileElement el3 = (MobileElement) driver.findElementById("com.android.packageinstaller:id/permission_allow_button");
     if (el3.isDisplayed()){
     	el3.click();
     }else{
     	System.out.println("Permission is not displayed");
-}```
+}
+```
 
-###Python [link](https://github.com/jamesknowsbest/sample-appium-test-to-dismiss-popups/blob/master/src/main/java/com/jamesknowsbest/www/pythoncodeDoingTheSame.py)
+### Python [link](https://github.com/jamesknowsbest/sample-appium-test-to-dismiss-popups/blob/master/src/main/java/com/jamesknowsbest/www/pythoncodeDoingTheSame.py)
+
 ```
 el3 = driver.find_element_by_id("com.android.packageinstaller:id/permission_deny_button")
 el3.click()
 ```
 
-###Instrumentation
+### Instrumentation
   TODO
 
-###Calabash
+### Calabash
   TODO
   
   
