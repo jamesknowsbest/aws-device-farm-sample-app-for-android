@@ -1,4 +1,4 @@
-# AWS Device Farm Sample App for Android fork
+# AWS Device Farm Sample App for Android | fork
 I forked this project to hardcode a popup to appear where a dialoge box asks for permission. 
 
 
@@ -32,8 +32,23 @@ el3.click()
   TODO: need to implement solution from this [project](https://github.com/dannyroa/espresso-samples/blob/master/RuntimePermissions/app/src/androidTest/java/com/dannyroa/espresso_samples/runtime_permissions/PermissionsTest.java#L42): 
 
 ## Calabash
-  TODO
+  Here are the steps to run the calabash tests using the Gemfile and bundler
   
+  ```
+  bundle exec calabash-android resign ./app/build/outputs/apk/debug/app-debug.apk
+  bundle exec calabash-android run ./app/build/outputs/apk/debug/app-debug.apk
+  ```
+  Gemfile contents: 
+  ```
+  gem 'calabash-cucumber'
+  gem 'calabash-android'
+  ```
+  You may need to use install these before running the bundler commands with: 
+  
+  ```
+    gem install calabash-cucumber
+    gem install calabash-android
+  ```
   
 This is a sample native Android app that contains many of the stock Android components and elements, along with example [Appium](https://github.com/awslabs/aws-device-farm-appium-tests-for-sample-app), [Calabash](https://github.com/awslabs/aws-device-farm-calabash-tests-for-sample-app), and [Espresso](https://github.com/awslabs/aws-device-farm-sample-app-for-android#strategies-for-espresso) tests. You can use the app and example tests as a reference for your own AWS Device Farm test scripts.
 
