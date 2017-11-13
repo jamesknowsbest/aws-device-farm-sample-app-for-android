@@ -17,6 +17,7 @@ package com.amazonaws.devicefarm.android.referenceapp.Categories;
 
 import com.amazonaws.devicefarm.android.referenceapp.BaseADFTest;
 import com.amazonaws.devicefarm.android.referenceapp.R;
+//import android.support.test.espresso.
 
 import org.junit.Test;
 
@@ -54,6 +55,21 @@ public class LoginPageTest extends BaseADFTest {
     public void testLoginFailCheck(){
         loginIn("Wrong Username", "12345", R.string.login_fail_message);
     }
+
+
+//    private void grantLocationPermission() {
+//        UiObject2 btnAllow = device.wait(Until.findObject(By.res(INSTALLER_PACKAGE_NAME, "permission_allow_button")),
+//                500);
+//        MatcherAssert.assertThat(btnAllow.isEnabled(), Is.is(true));
+//
+//        btnAllow.click();
+//
+//        UiObject2 tvLocationPermissionGranted = device.wait(Until.findObject(By.res(APP_PACKAGE_NAME,
+//                "tvLocationPermissionGranted")), 10000);
+//
+//        MatcherAssert.assertThat(tvLocationPermissionGranted, IsNull.notNullValue());
+//
+//    }
 
     /**
      * Attemps to log into the form
